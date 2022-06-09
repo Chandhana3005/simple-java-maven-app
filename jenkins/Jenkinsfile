@@ -7,8 +7,9 @@ pipeline {
     }
     stages {
         stage('checkout') {
-                credentialsId: 'Sonar',
-                url: 'git@github.com:Chandhana3005/simple-java-maven-app.git'
+            steps {
+                checkout scm
+            }
         }
         stage('sonarqube analysis') {
             steps {
