@@ -7,7 +7,6 @@ pipeline {
     }
     stages {
         stage('checkout') {
-                branch: 'master',
                 credentialsId: 'Sonar',
                 url: 'git@github.com:Chandhana3005/simple-java-maven-app.git'
         }
